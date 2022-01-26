@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="employee" rowHeight="60" id="ddg-DK-Dnk" customClass="EmployeeCell" customModule="TimeManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ddg-DK-Dnk" id="Jc4-ok-SwZ">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynz-lQ-8ua">
+                        <rect key="frame" x="15" y="12" width="43" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overtime:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4d-I5-1Gk">
+                        <rect key="frame" x="15" y="40" width="64" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eo-sQ-cZq">
+                        <rect key="frame" x="84" y="41" width="33" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l7G-Op-spY">
+                        <rect key="frame" x="381.5" y="40.5" width="12.5" height="16.5"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="l7G-Op-spY" firstAttribute="centerY" secondItem="Jc4-ok-SwZ" secondAttribute="centerY" id="BW8-EG-DrP"/>
+                    <constraint firstItem="1eo-sQ-cZq" firstAttribute="leading" secondItem="J4d-I5-1Gk" secondAttribute="trailing" constant="5" id="KbW-Nx-BJo"/>
+                    <constraint firstItem="J4d-I5-1Gk" firstAttribute="top" secondItem="ynz-lQ-8ua" secondAttribute="bottom" constant="8" id="TNK-Ad-Apw"/>
+                    <constraint firstItem="ynz-lQ-8ua" firstAttribute="top" secondItem="Jc4-ok-SwZ" secondAttribute="top" constant="12" id="bSc-Du-bHb"/>
+                    <constraint firstItem="ynz-lQ-8ua" firstAttribute="leading" secondItem="Jc4-ok-SwZ" secondAttribute="leading" constant="15" id="h6M-My-ihz"/>
+                    <constraint firstItem="1eo-sQ-cZq" firstAttribute="top" secondItem="ynz-lQ-8ua" secondAttribute="bottom" constant="9" id="hnC-QO-Edm"/>
+                    <constraint firstItem="J4d-I5-1Gk" firstAttribute="leading" secondItem="Jc4-ok-SwZ" secondAttribute="leading" constant="15" id="qAQ-vp-hth"/>
+                    <constraint firstAttribute="trailing" secondItem="l7G-Op-spY" secondAttribute="trailing" constant="20" id="qim-Na-f9V"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="ynz-lQ-8ua" id="mgO-yq-6EY"/>
+                <outlet property="overtimeHoursLabel" destination="1eo-sQ-cZq" id="RjX-D4-w3d"/>
+            </connections>
+            <point key="canvasLocation" x="-88.405797101449281" y="-184.48660714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
