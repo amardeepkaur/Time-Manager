@@ -11,12 +11,24 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var employeeTableView: UITableView!
-    var empList = ["John Doe", "Jennifer", "Henry", "Nate", "Chuck", "Serena", "Balir", "Dan"]
+    var empList = ["John Doe", "Jennifer", "Henry", "Nate", "Chuck", "Serena", "Blair", "Dan"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         employeeTableView.register(UINib(nibName: "EmployeeCell", bundle: nil), forCellReuseIdentifier: "employee")
+        getWeeklyDates()
+    }
+    
+    func getWeeklyDates() {
+        let dateInWeek = Date()//27 Jan 2022
+        let calendar = Calendar.current
+        let dayOfWeek = calendar.component(.weekday, from: dateInWeek)
+        let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: dateInWeek)!
+        let days = (weekdays.lowerBound ..< weekdays.upperBound)
+            .compactMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: dateInWeek) }
+
+        print(days)
     }
     
     //MARK: TablevView Methods

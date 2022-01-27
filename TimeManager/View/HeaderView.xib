@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="drs-Sg-8ou" customClass="HeaderView" customModule="TimeManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="436" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kP9-n5-fTJ">
+                    <rect key="frame" x="20" y="24.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NNQ-Q0-CcI">
+                    <rect key="frame" x="391" y="27.5" width="25" height="15.5"/>
+                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="AVE-Hf-Wso"/>
+                        <constraint firstAttribute="width" constant="25" id="Chj-82-yBB"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2P-9f-c9i">
+                    <rect key="frame" x="331" y="24.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="LwS-hU-cAF"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="NNQ-Q0-CcI" firstAttribute="leading" secondItem="G2P-9f-c9i" secondAttribute="trailing" constant="18" id="8Xh-qt-LfE"/>
+                <constraint firstItem="LwS-hU-cAF" firstAttribute="trailing" secondItem="NNQ-Q0-CcI" secondAttribute="trailing" constant="20" id="K7U-4q-5uU"/>
+                <constraint firstItem="G2P-9f-c9i" firstAttribute="centerY" secondItem="drs-Sg-8ou" secondAttribute="centerY" id="Myw-IK-zqh"/>
+                <constraint firstItem="kP9-n5-fTJ" firstAttribute="leading" secondItem="LwS-hU-cAF" secondAttribute="leading" constant="20" id="PsB-Rt-DGf"/>
+                <constraint firstItem="kP9-n5-fTJ" firstAttribute="centerY" secondItem="drs-Sg-8ou" secondAttribute="centerY" id="bb4-Lf-Sm4"/>
+                <constraint firstItem="NNQ-Q0-CcI" firstAttribute="centerY" secondItem="drs-Sg-8ou" secondAttribute="centerY" id="tMQ-ey-Gnr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="openCloseImageView" destination="NNQ-Q0-CcI" id="YQ1-XV-fNb"/>
+                <outlet property="weekLabel" destination="kP9-n5-fTJ" id="59T-O2-TmQ"/>
+                <outlet property="weeklyOvertime" destination="G2P-9f-c9i" id="pOz-LI-iVK"/>
+            </connections>
+            <point key="canvasLocation" x="97" y="234"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
