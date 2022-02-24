@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  TimeManager
 //
-//  Created by M_AMBIN03853 on 22/01/22.
+//  Created by Amardeep on 22/01/22.
 //  Copyright © 2022 Amardeep. All rights reserved.
 //
 

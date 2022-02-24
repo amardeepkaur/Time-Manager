@@ -2,7 +2,7 @@
 //  Date+.swift
 //  TimeManager
 //
-//  Created by M_AMBIN03853 on 27/01/22.
+//  Created by Amardeep on 27/01/22.
 //  Copyright © 2022 Amardeep. All rights reserved.
 //
 
@@ -31,8 +31,4 @@ extension Date {
         let year = dateFormatter.string(from: date)
         return year
     }
-    
-    
-
-    
 }

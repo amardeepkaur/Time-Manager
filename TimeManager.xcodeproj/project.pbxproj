@@ -23,6 +23,11 @@
 		22C6C6F5279D6D2D00DEDF8A /* EmployeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C6C6F4279D6D2D00DEDF8A /* EmployeeCell.xib */; };
 		22C6C6F7279D703A00DEDF8A /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C6C6F6279D703A00DEDF8A /* EmployeeCell.swift */; };
 		22C6C6F9279D726F00DEDF8A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C6C6F8279D726F00DEDF8A /* DetailViewController.swift */; };
+		22DF625727C5371700FC41A7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DF625627C5371700FC41A7 /* Date.swift */; };
+		22DF625927C5375800FC41A7 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DF625827C5375800FC41A7 /* CalendarHelper.swift */; };
+		22DF625E27C6229C00FC41A7 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DF625D27C6229C00FC41A7 /* CalendarViewModel.swift */; };
+		22DF626027C622DC00FC41A7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DF625F27C622DC00FC41A7 /* CalendarViewController.swift */; };
+		22DF626227C62CB600FC41A7 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DF626127C62CB600FC41A7 /* DateCell.swift */; };
 		6F3BAB57AE63FE7AE0DF45E8 /* Pods_TimeManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BB3B8E90C6ECDB44421F3 /* Pods_TimeManager.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +50,11 @@
 		22C6C6F4279D6D2D00DEDF8A /* EmployeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeCell.xib; sourceTree = "<group>"; };
 		22C6C6F6279D703A00DEDF8A /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		22C6C6F8279D726F00DEDF8A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		22DF625627C5371700FC41A7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		22DF625827C5375800FC41A7 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		22DF625D27C6229C00FC41A7 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		22DF625F27C622DC00FC41A7 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		22DF626127C62CB600FC41A7 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		725059A3DEE14C6AD47D5EFF /* Pods-TimeManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManager.debug.xcconfig"; path = "Target Support Files/Pods-TimeManager/Pods-TimeManager.debug.xcconfig"; sourceTree = "<group>"; };
 		979A9AC02FC5C248E9C145DE /* Pods-TimeManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeManager.release.xcconfig"; path = "Target Support Files/Pods-TimeManager/Pods-TimeManager.release.xcconfig"; sourceTree = "<group>"; };
 		C00BB3B8E90C6ECDB44421F3 /* Pods_TimeManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,15 +102,17 @@
 		228918DC279C1F5C000714B5 /* TimeManager */ = {
 			isa = PBXGroup;
 			children = (
+				22DF626327C6398B00FC41A7 /* Utilities */,
+				22DF625527C536E800FC41A7 /* Calendar */,
 				2224DA5A27A2DB180083597E /* Model */,
 				22C6C6F3279D6CF500DEDF8A /* Controller */,
+				22DF625C27C6224900FC41A7 /* ViewModel */,
 				22C6C6F2279D6CF000DEDF8A /* View */,
 				228918DF279C1F5C000714B5 /* SceneDelegate.swift */,
 				228918E9279C1F5E000714B5 /* Assets.xcassets */,
 				228918EB279C1F5E000714B5 /* LaunchScreen.storyboard */,
 				228918EE279C1F5E000714B5 /* Info.plist */,
 				228918E6279C1F5C000714B5 /* TimeManager.xcdatamodeld */,
-				2224DA5227A1D1CB0083597E /* Date+.swift */,
 			);
 			path = TimeManager;
 			sourceTree = "<group>";
@@ -114,6 +126,7 @@
 				2224DA5427A2D3200083597E /* WeeklyTableViewCell.swift */,
 				2224DA5D27A2F0240083597E /* HeaderView.swift */,
 				2224DA5F27A2F08A0083597E /* HeaderView.xib */,
+				22DF626127C62CB600FC41A7 /* DateCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,8 +137,34 @@
 				228918DD279C1F5C000714B5 /* AppDelegate.swift */,
 				228918E1279C1F5C000714B5 /* ViewController.swift */,
 				22C6C6F8279D726F00DEDF8A /* DetailViewController.swift */,
+				22DF625F27C622DC00FC41A7 /* CalendarViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		22DF625527C536E800FC41A7 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				22DF625627C5371700FC41A7 /* Date.swift */,
+				22DF625827C5375800FC41A7 /* CalendarHelper.swift */,
+				2224DA5227A1D1CB0083597E /* Date+.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		22DF625C27C6224900FC41A7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22DF625D27C6229C00FC41A7 /* CalendarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22DF626327C6398B00FC41A7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		7664CFAAF1F7E28A890E6C3D /* Pods */ = {
@@ -262,13 +301,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22DF626027C622DC00FC41A7 /* CalendarViewController.swift in Sources */,
 				2224DA5527A2D3200083597E /* WeeklyTableViewCell.swift in Sources */,
 				2224DA5327A1D1CC0083597E /* Date+.swift in Sources */,
 				228918E2279C1F5C000714B5 /* ViewController.swift in Sources */,
 				2224DA6227A302C80083597E /* Employee.swift in Sources */,
 				228918DE279C1F5C000714B5 /* AppDelegate.swift in Sources */,
 				228918E8279C1F5C000714B5 /* TimeManager.xcdatamodeld in Sources */,
+				22DF626227C62CB600FC41A7 /* DateCell.swift in Sources */,
 				22C6C6F9279D726F00DEDF8A /* DetailViewController.swift in Sources */,
+				22DF625927C5375800FC41A7 /* CalendarHelper.swift in Sources */,
+				22DF625727C5371700FC41A7 /* Date.swift in Sources */,
+				22DF625E27C6229C00FC41A7 /* CalendarViewModel.swift in Sources */,
 				2224DA5E27A2F0240083597E /* HeaderView.swift in Sources */,
 				2224DA5C27A2DB2B0083597E /* Day.swift in Sources */,
 				228918E0279C1F5C000714B5 /* SceneDelegate.swift in Sources */,

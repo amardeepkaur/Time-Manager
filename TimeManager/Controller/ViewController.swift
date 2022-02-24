@@ -2,11 +2,12 @@
 //  ViewController.swift
 //  TimeManager
 //
-//  Created by M_AMBIN03853 on 22/01/22.
+//  Created by Amardeep on 22/01/22.
 //  Copyright © 2022 Amardeep. All rights reserved.
 //
 
 import UIKit
+import JTAppleCalendar
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -47,7 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailsController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailViewController") as! DetailViewController
+        let detailsController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
         navigationController?.pushViewController(detailsController, animated: true)
     }
 
